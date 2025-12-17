@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entrepreneurship Hatchery · TheraPals</title>
+  <style>
+    :root {
+      --bg: #0b1224;
+      --card: #0f172a;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --accent: #f472b6;
+      --accent2: #22d3ee;
+      --accent3: #a78bfa;
+      --glow: rgba(244,114,182,0.35);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(244,114,182,0.22), transparent 30%),
+        radial-gradient(circle at 80% 10%, rgba(34,211,238,0.18), transparent 28%),
+        radial-gradient(circle at 40% 80%, rgba(167,139,250,0.15), transparent 35%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    header {
+      padding: 64px 24px 24px;
+      text-align: center;
+      max-width: 980px;
+      margin: 0 auto;
+    }
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+    }
+    h1 {
+      margin: 16px 0 12px;
+      font-size: clamp(34px, 5vw, 52px);
+      letter-spacing: -0.02em;
+    }
+    .lead {
+      margin: 0 auto;
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+    .hero-card {
+      margin: 28px auto 32px;
+      max-width: 980px;
+      padding: 22px 22px 18px;
+      background: linear-gradient(135deg, rgba(15,23,42,0.9), rgba(17,24,39,0.85));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.04) inset;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      align-items: center;
+    }
+    .hero-copy h3 { margin: 0 0 8px; font-size: 22px; color: var(--accent); }
+    .hero-copy p { margin: 0; color: var(--muted); }
+    .hero-pill {
+      justify-self: end;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 16px;
+      background: rgba(34,211,238,0.15);
+      color: #e0f2fe;
+      border-radius: 16px;
+      border: 1px solid rgba(34,211,238,0.35);
+      box-shadow: 0 12px 30px rgba(34,211,238,0.25);
+      font-weight: 600;
+    }
+    main {
+      padding: 12px 24px 72px;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    article {
+      background: linear-gradient(150deg, rgba(17,24,39,0.92), rgba(12,18,33,0.92));
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.38);
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    article::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 20% 20%, rgba(255,255,255,0.05), transparent 40%);
+      pointer-events: none;
+      z-index: -1;
+    }
+    .icon {
+      font-size: 26px;
+      margin-right: 8px;
+    }
+    h2 {
+      margin: 0 0 6px;
+      font-size: 21px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .tagline {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 14px;
+      letter-spacing: 0.01em;
+    }
+    ul {
+      padding-left: 18px;
+      margin: 0 0 12px;
+      color: #e2e8f0;
+    }
+    li { margin-bottom: 8px; }
+    .resources {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
+    .pill {
+      background: rgba(244,114,182,0.12);
+      color: #ffe4f1;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      text-decoration: none;
+      border: 1px solid rgba(244,114,182,0.32);
+      transition: all 0.2s ease;
+      box-shadow: 0 8px 24px var(--glow);
+    }
+    .pill:hover { background: rgba(244,114,182,0.22); transform: translateY(-1px); }
+    .cta {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      background: linear-gradient(120deg, var(--accent), var(--accent2));
+      color: #0b1224;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 14px 30px rgba(244,114,182,0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .cta:hover { transform: translateY(-1px); box-shadow: 0 18px 36px rgba(244,114,182,0.45); }
+    footer {
+      text-align: center;
+      padding: 26px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    @media (max-width: 720px) { .hero-card { grid-template-columns: 1fr; } .hero-pill { justify-self: start; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">🧠✨ Entrepreneurship Hatchery</div>
+    <h1>Meet TheraPals — little plush friends for big feelings</h1>
+    <p class="lead">
+      Each TheraPal carries its own mental health story, helping people express and relate to what they’re feeling. Five pals, five common conditions, one comforting hug.
+    </p>
+
+    <div class="hero-card">
+      <div class="hero-copy">
+        <h3>Our Product: TheraPals</h3>
+        <p>Small, soft plushies designed for self-expression and companionship. Pair each pal with helpful info and resources to reduce stigma and spark supportive conversations.</p>
+      </div>
+      <div class="hero-pill">🌈 Built with heart · 💬 Start the conversation</div>
+    </div>
+    <a class="cta" href="why-therapals.html">Why choose TheraPals?</a>
+  </header>
+
+  <main>
+    <article>
+      <h2><span class="icon">🚀</span>ADHD Pal</h2>
+      <p class="tagline">Attention-Deficit/Hyperactivity Disorder</p>
+      <ul>
+        <li>Core signs: inattention, hyperactivity, impulsivity.</li>
+        <li>Can impact focus, organization, time management, and emotional regulation.</li>
+        <li>Often begins in childhood and may persist into adulthood.</li>
+      </ul>
+      <div class="resources">
+        <a class="pill" href="https://chadd.org" target="_blank" rel="noreferrer">CHADD</a>
+        <a class="pill" href="https://www.cdc.gov/ncbddd/adhd/index.html" target="_blank" rel="noreferrer">CDC ADHD</a>
+      </div>
+      <a class="cta" href="adhd-pal.html">Meet this Pal</a>
+    </article>
+
+    <article>
+      <h2><span class="icon">🌙</span>Bipolar Pal</h2>
+      <p class="tagline">Shifts between depressive and manic/hypomanic states</p>
+      <ul>
+        <li>Mania/hypomania: elevated mood, decreased sleep need, racing thoughts.</li>
+        <li>Depression: low mood, fatigue, loss of interest, feelings of worthlessness.</li>
+        <li>Management often combines medication, therapy, and routine stability.</li>
+      </ul>
+      <div class="resources">
+        <a class="pill" href="https://www.nami.org/About-Mental-Illness/Mental-Health-Conditions/Bipolar-Disorder" target="_blank" rel="noreferrer">NAMI</a>
+        <a class="pill" href="https://www.mayoclinic.org/diseases-conditions/bipolar-disorder" target="_blank" rel="noreferrer">Mayo Clinic</a>
+      </div>
+      <a class="cta" href="bipolar-pal.html">Meet this Pal</a>
+    </article>
+
+    <article>
+      <h2><span class="icon">☀️</span>Anxiety Pal</h2>
+      <p class="tagline">Excessive worry, fear, or physical arousal</p>
+      <ul>
+        <li>Common forms: generalized anxiety, social anxiety, panic disorder.</li>
+        <li>Symptoms can include restlessness, muscle tension, rapid heartbeat.</li>
+        <li>Therapy (like CBT), lifestyle changes, and sometimes medication help.</li>
+      </ul>
+      <div class="resources">
+        <a class="pill" href="https://www.adaa.org/understanding-anxiety" target="_blank" rel="noreferrer">ADAA</a>
+        <a class="pill" href="https://www.nimh.nih.gov/health/topics/anxiety-disorders" target="_blank" rel="noreferrer">NIMH</a>
+      </div>
+      <a class="cta" href="anxiety-pal.html">Meet this Pal</a>
+    </article>
+
+    <article>
+      <h2><span class="icon">🛡️</span>PTSD Pal</h2>
+      <p class="tagline">Post-Traumatic Stress Disorder</p>
+      <ul>
+        <li>Triggered by experiencing or witnessing traumatic events.</li>
+        <li>Symptoms: intrusive memories, avoidance, negative mood shifts, hyperarousal.</li>
+        <li>Treatments include trauma-focused therapies (e.g., EMDR) and support networks.</li>
+      </ul>
+      <div class="resources">
+        <a class="pill" href="https://www.ptsd.va.gov" target="_blank" rel="noreferrer">VA PTSD</a>
+        <a class="pill" href="https://www.apa.org/topics/ptsd" target="_blank" rel="noreferrer">APA</a>
+      </div>
+      <a class="cta" href="ptsd-pal.html">Meet this Pal</a>
+    </article>
+
+    <article>
+      <h2><span class="icon">💙</span>Depression Pal</h2>
+      <p class="tagline">Persistent low mood and loss of interest</p>
+      <ul>
+        <li>Common signs: sadness, fatigue, sleep/appetite changes, difficulty concentrating.</li>
+        <li>Ranges from mild to severe; can affect daily functioning and relationships.</li>
+        <li>Often treated with therapy, lifestyle support, and sometimes medication.</li>
+      </ul>
+      <div class="resources">
+        <a class="pill" href="https://www.who.int/news-room/fact-sheets/detail/depression" target="_blank" rel="noreferrer">WHO</a>
+        <a class="pill" href="https://www.mhanational.org/conditions/depression" target="_blank" rel="noreferrer">MHA</a>
+      </div>
+      <a class="cta" href="depression-pal.html">Meet this Pal</a>
+    </article>
+  </main>
+
+  <footer>
+    TheraPals are for support and self-expression, not diagnosis. If you or someone you know is struggling, please reach out to a licensed mental health professional or local emergency services for immediate help.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TheraPal · Depression Pal</title>
+  <style>
+    :root { --bg:#0b1224; --card:#0f172a; --text:#f8fafc; --muted:#cbd5e1; --accent:#f472b6; --accent2:#22d3ee; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family:"Inter","Segoe UI",system-ui,sans-serif; background:radial-gradient(circle at 18% 24%, rgba(244,114,182,0.18), transparent 32%), radial-gradient(circle at 70% 12%, rgba(34,211,238,0.16), transparent 28%), var(--bg); color:var(--text); line-height:1.6; min-height:100vh; }
+    header { padding:28px 18px 10px; max-width:960px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    a.back { color:#e0f2fe; text-decoration:none; padding:10px 12px; border-radius:12px; background:rgba(34,211,238,0.16); border:1px solid rgba(34,211,238,0.3); }
+    h1 { margin:8px 0 4px; font-size:32px; letter-spacing:-0.02em; }
+    .tagline { margin:0 0 14px; color:var(--muted); }
+    main { max-width:960px; margin:0 auto; padding:10px 18px 48px; display:grid; gap:16px; }
+    .card { background:linear-gradient(140deg, rgba(17,24,39,0.94), rgba(12,18,33,0.9)); border:1px solid rgba(255,255,255,0.08); border-radius:18px; padding:20px; box-shadow:0 18px 40px rgba(0,0,0,0.4); }
+    h2 { margin:0 0 8px; }
+    ul { margin:0; padding-left:18px; color:#e2e8f0; }
+    li { margin-bottom:8px; }
+    .pill { display:inline-block; margin-top:14px; padding:10px 14px; background:rgba(244,114,182,0.12); color:#ffe4f1; border-radius:12px; text-decoration:none; border:1px solid rgba(244,114,182,0.3); }
+    footer { text-align:center; color:var(--muted); padding:20px; font-size:14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div>
+      <a class="back" href="hatchery.html">← Back to TheraPals</a>
+      <h1>💙 Depression Pal</h1>
+      <p class="tagline">A gentle friend who understands heavy days and reminds you that small sparks matter.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="card">
+      <h2>Personality & Story</h2>
+      <ul>
+        <li>Soft-spoken, kind, and honest about low energy moments.</li>
+        <li>Learned to honor feelings instead of hiding them.</li>
+        <li>Collects small victories: opening curtains, sipping water, stepping outside.</li>
+        <li>Understands that motivation often follows action, not the other way around.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>How they cope</h2>
+      <ul>
+        <li>Builds a “minimum list”: drink water, move for 3 minutes, open the blinds.</li>
+        <li>Uses activity pacing: one small action, then a rest.</li>
+        <li>Reaches out to a trusted person when thoughts feel heavy.</li>
+      </ul>
+      <a class="pill" href="https://www.mhanational.org/conditions/depression" target="_blank" rel="noreferrer">Learn more at MHA</a>
+    </section>
+
+    <section class="card">
+      <h2>Motivational note</h2>
+      <p>Some days the smallest step is heroic. If all you did was get out of bed or text a friend “I’m here,” that counts. You’re not behind; you’re healing at your own pace. Light a tiny spark—water, sunlight, a stretch—and let it be enough for today.</p>
+    </section>
+  </main>
+
+  <footer>TheraPals share stories, not diagnoses. For personal care, connect with a licensed professional.</footer>
+</body>
+</html>
+
