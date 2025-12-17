@@ -103,6 +103,24 @@
       overflow: hidden;
       isolation: isolate;
     }
+    .pal-image {
+      width: 82px;
+      height: 82px;
+      border-radius: 18px;
+      background: rgba(15,23,42,0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      overflow: hidden;
+      box-shadow: 0 14px 32px rgba(15,23,42,0.8);
+    }
+    .pal-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
     article::after {
       content: "";
       position: absolute;
@@ -194,12 +212,15 @@
 
   <main>
     <article>
-      <h2><span class="icon">🚀</span>ADHD Pal</h2>
-      <p class="tagline">Attention-Deficit/Hyperactivity Disorder</p>
+      <div class="pal-image">
+        <img src="adhd.png" alt="Ziggy, the ADHD TheraPal plush" />
+      </div>
+      <h2>⚡ ADHD — “Ziggy”</h2>
+      <p class="tagline">A quick-thinking pal whose brain sprints with ideas.</p>
       <ul>
-        <li>Core signs: inattention, hyperactivity, impulsivity.</li>
-        <li>Can impact focus, organization, time management, and emotional regulation.</li>
-        <li>Often begins in childhood and may persist into adulthood.</li>
+        <li>Ziggy’s thoughts race ahead, so they juggle lots of ideas at once.</li>
+        <li>They notice details other people miss and love jumping into new projects.</li>
+        <li>Timers, checklists, and gentle reminders help turn all that energy into action.</li>
       </ul>
       <div class="resources">
         <a class="pill" href="https://chadd.org" target="_blank" rel="noreferrer">CHADD</a>
@@ -209,12 +230,15 @@
     </article>
 
     <article>
-      <h2><span class="icon">🌙</span>Bipolar Pal</h2>
-      <p class="tagline">Shifts between depressive and manic/hypomanic states</p>
+      <div class="pal-image">
+        <img src="bipolar.png" alt="Nova, the Bipolar TheraPal plush" />
+      </div>
+      <h2>🌗 Bipolar — “Nova”</h2>
+      <p class="tagline">A starry pal who knows both bright highs and heavy lows.</p>
       <ul>
-        <li>Mania/hypomania: elevated mood, decreased sleep need, racing thoughts.</li>
-        <li>Depression: low mood, fatigue, loss of interest, feelings of worthlessness.</li>
-        <li>Management often combines medication, therapy, and routine stability.</li>
+        <li>Nova has seasons of big energy and creativity, and seasons that feel slower and heavier.</li>
+        <li>They’re learning that routines, sleep, and support help smooth out the waves.</li>
+        <li>Nova is a reminder that every phase passes, and balance can be built over time.</li>
       </ul>
       <div class="resources">
         <a class="pill" href="https://www.nami.org/About-Mental-Illness/Mental-Health-Conditions/Bipolar-Disorder" target="_blank" rel="noreferrer">NAMI</a>
@@ -224,12 +248,15 @@
     </article>
 
     <article>
-      <h2><span class="icon">☀️</span>Anxiety Pal</h2>
-      <p class="tagline">Excessive worry, fear, or physical arousal</p>
+      <div class="pal-image">
+        <img src="anxiety.png" alt="Lumi, the Anxiety TheraPal plush" />
+      </div>
+      <h2>🌪️ Anxiety — “Lumi”</h2>
+      <p class="tagline">A gentle worrier who feels things intensely.</p>
       <ul>
-        <li>Common forms: generalized anxiety, social anxiety, panic disorder.</li>
-        <li>Symptoms can include restlessness, muscle tension, rapid heartbeat.</li>
-        <li>Therapy (like CBT), lifestyle changes, and sometimes medication help.</li>
+        <li>Lumi’s mind likes to jump to the “what ifs,” even on calm days.</li>
+        <li>They practice slow breathing and grounding to remind themselves they’re safe right now.</li>
+        <li>Lumi shows that small brave steps still count as courage.</li>
       </ul>
       <div class="resources">
         <a class="pill" href="https://www.adaa.org/understanding-anxiety" target="_blank" rel="noreferrer">ADAA</a>
@@ -239,12 +266,15 @@
     </article>
 
     <article>
-      <h2><span class="icon">🛡️</span>PTSD Pal</h2>
-      <p class="tagline">Post-Traumatic Stress Disorder</p>
+      <div class="pal-image">
+        <img src="ptsd.png" alt="Ash, the PTSD TheraPal plush with a shield" />
+      </div>
+      <h2>🛡️ PTSD — “Ash”</h2>
+      <p class="tagline">A protective pal who has been through hard things.</p>
       <ul>
-        <li>Triggered by experiencing or witnessing traumatic events.</li>
-        <li>Symptoms: intrusive memories, avoidance, negative mood shifts, hyperarousal.</li>
-        <li>Treatments include trauma-focused therapies (e.g., EMDR) and support networks.</li>
+        <li>Ash can feel on edge when something reminds them of past events.</li>
+        <li>They build safe plans, soothing routines, and lean on trusted people.</li>
+        <li>Ash is here to say that healing can be slow and still very real.</li>
       </ul>
       <div class="resources">
         <a class="pill" href="https://www.ptsd.va.gov" target="_blank" rel="noreferrer">VA PTSD</a>
@@ -254,12 +284,15 @@
     </article>
 
     <article>
-      <h2><span class="icon">💙</span>Depression Pal</h2>
-      <p class="tagline">Persistent low mood and loss of interest</p>
+      <div class="pal-image">
+        <img src="depression.png" alt="Milo, the Depression TheraPal plush with a tear" />
+      </div>
+      <h2>🌧️ Depression — “Milo”</h2>
+      <p class="tagline">A soft, steady pal for heavier days.</p>
       <ul>
-        <li>Common signs: sadness, fatigue, sleep/appetite changes, difficulty concentrating.</li>
-        <li>Ranges from mild to severe; can affect daily functioning and relationships.</li>
-        <li>Often treated with therapy, lifestyle support, and sometimes medication.</li>
+        <li>Milo moves a little slower when everything feels heavy or numb.</li>
+        <li>They remind you that effort can be invisible, and resting still counts as trying.</li>
+        <li>Milo celebrates tiny steps, like opening the curtains or sending one message.</li>
       </ul>
       <div class="resources">
         <a class="pill" href="https://www.who.int/news-room/fact-sheets/detail/depression" target="_blank" rel="noreferrer">WHO</a>
@@ -274,3 +307,4 @@
   </footer>
 </body>
 </html>
+

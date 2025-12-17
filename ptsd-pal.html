@@ -3,30 +3,41 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TheraPal · PTSD Pal</title>
+  <title>TheraPal · Ash (PTSD)</title>
   <style>
-    :root { --bg:#0b1224; --card:#0f172a; --text:#f8fafc; --muted:#cbd5e1; --accent:#22d3ee; --accent2:#a78bfa; }
-    * { box-sizing: border-box; }
-    body { margin:0; font-family:"Inter","Segoe UI",system-ui,sans-serif; background:radial-gradient(circle at 18% 24%, rgba(34,211,238,0.18), transparent 32%), radial-gradient(circle at 70% 16%, rgba(167,139,250,0.18), transparent 28%), var(--bg); color:var(--text); line-height:1.6; min-height:100vh; }
-    header { padding:28px 18px 10px; max-width:960px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; gap:12px; }
-    a.back { color:#e0f2fe; text-decoration:none; padding:10px 12px; border-radius:12px; background:rgba(34,211,238,0.16); border:1px solid rgba(34,211,238,0.3); }
-    h1 { margin:8px 0 4px; font-size:32px; letter-spacing:-0.02em; }
-    .tagline { margin:0 0 14px; color:var(--muted); }
+    :root { --bg:#0b1224; --card:#0f172a; --text:#f8fafc; --muted:#cbd5e1; --accent:#22c55e; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"Inter","Segoe UI",system-ui,sans-serif; background:radial-gradient(circle at 22% 24%, rgba(34,197,94,0.22), transparent 34%), radial-gradient(circle at 76% 16%, rgba(15,23,42,0.9), transparent 32%), var(--bg); color:var(--text); line-height:1.6; min-height:100vh; }
+    header { padding:28px 18px 10px; max-width:960px; margin:0 auto; }
+    a.back { color:#e0f2fe; text-decoration:none; padding:9px 12px; border-radius:12px; background:rgba(34,197,94,0.18); border:1px solid rgba(34,197,94,0.45); }
+    h1 { margin:10px 0 4px; font-size:32px; letter-spacing:-0.02em; }
+    .tagline { margin:0 0 16px; color:var(--muted); }
+    .pal-hero { display:flex; gap:18px; align-items:center; flex-wrap:wrap; }
+    .pal-image { width:110px; height:110px; border-radius:24px; background:#0f172a; display:flex; align-items:center; justify-content:center; overflow:hidden; box-shadow:0 18px 40px rgba(0,0,0,0.6); }
+    .pal-image img { width:100%; height:100%; object-fit:contain; }
     main { max-width:960px; margin:0 auto; padding:10px 18px 48px; display:grid; gap:16px; }
-    .card { background:linear-gradient(140deg, rgba(17,24,39,0.94), rgba(12,18,33,0.9)); border:1px solid rgba(255,255,255,0.08); border-radius:18px; padding:20px; box-shadow:0 18px 40px rgba(0,0,0,0.4); }
-    h2 { margin:0 0 8px; }
+    .card { background:linear-gradient(140deg, rgba(15,23,42,0.96), rgba(12,18,33,0.94)); border:1px solid rgba(255,255,255,0.08); border-radius:18px; padding:18px 20px 20px; box-shadow:0 18px 40px rgba(0,0,0,0.45); }
+    h2 { margin:0 0 8px; font-size:20px; }
+    p { margin:0 0 8px; }
     ul { margin:0; padding-left:18px; color:#e2e8f0; }
     li { margin-bottom:8px; }
-    .pill { display:inline-block; margin-top:14px; padding:10px 14px; background:rgba(34,211,238,0.14); color:#e0f2fe; border-radius:12px; text-decoration:none; border:1px solid rgba(34,211,238,0.35); }
+    .note { color:var(--muted); font-size:14px; margin-top:4px; }
     footer { text-align:center; color:var(--muted); padding:20px; font-size:14px; }
   </style>
 </head>
 <body>
   <header>
-    <div>
-      <a class="back" href="hatchery.html">← Back to TheraPals</a>
-      <h1>🛡️ PTSD Pal</h1>
-      <p class="tagline">A resilient friend who knows what hypervigilance feels like and values safe, grounded moments.</p>
+    <a class="back" href="index.html">← Back to TheraPals</a>
+    <div class="pal-hero">
+      <div class="pal-image">
+        <img src="ptsd.png" alt="Ash, the PTSD TheraPal plush with a shield" />
+      </div>
+      <div>
+        <h1>🛡️ PTSD — “Ash”</h1>
+        <p class="tagline">
+          Hi, I’m Ash. I’ve been through things that still echo in my body, even on safe days.
+        </p>
+      </div>
     </div>
   </header>
 
