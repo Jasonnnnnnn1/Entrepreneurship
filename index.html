@@ -183,13 +183,201 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
     .cta:hover { transform: translateY(-1px); box-shadow: 0 18px 36px rgba(244,114,182,0.45); }
+    .quiz-section {
+      max-width: 980px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+    .quiz-card {
+      background: linear-gradient(135deg, rgba(15,23,42,0.95), rgba(17,24,39,0.9));
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 20px;
+      padding: 32px 28px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+      position: relative;
+      overflow: hidden;
+    }
+    .quiz-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3));
+    }
+    .quiz-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    .quiz-header h2 {
+      font-size: 28px;
+      margin: 0 0 10px;
+      background: linear-gradient(120deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .quiz-header p {
+      color: var(--muted);
+      margin: 0;
+      font-size: 16px;
+    }
+    .quiz-container {
+      display: none;
+    }
+    .quiz-container.active {
+      display: block;
+    }
+    .question-card {
+      background: rgba(12,18,33,0.6);
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 16px;
+      padding: 22px;
+      margin-bottom: 18px;
+    }
+    .question-number {
+      color: var(--accent2);
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .question-text {
+      font-size: 18px;
+      margin: 0 0 16px;
+      color: var(--text);
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .option {
+      padding: 14px 18px;
+      background: rgba(15,23,42,0.7);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      color: var(--text);
+      font-size: 15px;
+    }
+    .option:hover {
+      background: rgba(244,114,182,0.15);
+      border-color: rgba(244,114,182,0.4);
+      transform: translateX(4px);
+    }
+    .option.selected {
+      background: rgba(244,114,182,0.25);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(244,114,182,0.2);
+    }
+    .quiz-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 24px;
+      gap: 12px;
+    }
+    .quiz-btn {
+      padding: 12px 24px;
+      border-radius: 12px;
+      border: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-size: 15px;
+    }
+    .quiz-btn.primary {
+      background: linear-gradient(120deg, var(--accent), var(--accent2));
+      color: #0b1224;
+      box-shadow: 0 8px 24px rgba(244,114,182,0.35);
+    }
+    .quiz-btn.primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(244,114,182,0.45);
+    }
+    .quiz-btn.secondary {
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .quiz-btn.secondary:hover {
+      background: rgba(255,255,255,0.12);
+    }
+    .quiz-btn:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    .quiz-progress {
+      height: 6px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 999px;
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+    .quiz-progress-bar {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      border-radius: 999px;
+      transition: width 0.3s ease;
+      width: 0%;
+    }
+    .results-container {
+      display: none;
+      text-align: center;
+    }
+    .results-container.active {
+      display: block;
+    }
+    .result-card {
+      background: rgba(12,18,33,0.6);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    .result-card h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .result-card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+    }
+    .result-link {
+      display: inline-block;
+      padding: 10px 18px;
+      background: rgba(244,114,182,0.15);
+      color: #ffe4f1;
+      border-radius: 10px;
+      text-decoration: none;
+      border: 1px solid rgba(244,114,182,0.3);
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .result-link:hover {
+      background: rgba(244,114,182,0.25);
+      transform: translateY(-1px);
+    }
     footer {
       text-align: center;
       padding: 26px;
       color: var(--muted);
       font-size: 14px;
     }
-    @media (max-width: 720px) { .hero-card { grid-template-columns: 1fr; } .hero-pill { justify-self: start; } }
+    @media (max-width: 720px) { 
+      .hero-card { grid-template-columns: 1fr; } 
+      .hero-pill { justify-self: start; }
+      .quiz-controls { flex-direction: column; }
+      .quiz-btn { width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -209,6 +397,47 @@
     </div>
     <a class="cta" href="why-therapals.html">Why choose TheraPals?</a>
   </header>
+
+  <section class="quiz-section">
+    <div class="quiz-card">
+      <div class="quiz-header">
+        <h2>🧩 Find Your TheraPal</h2>
+        <p>Take a quick quiz to discover which TheraPal might resonate with your experiences</p>
+      </div>
+      
+      <div id="quiz-start" class="quiz-container active">
+        <p style="text-align: center; color: var(--muted); margin-bottom: 24px;">
+          This quiz is designed to help you explore which TheraPal's story might feel familiar. 
+          It's not a diagnostic tool—just a gentle guide to self-discovery.
+        </p>
+        <div style="text-align: center;">
+          <button class="quiz-btn primary" onclick="startQuiz()">Start Quiz</button>
+        </div>
+      </div>
+
+      <div id="quiz-questions" class="quiz-container">
+        <div class="quiz-progress">
+          <div class="quiz-progress-bar" id="progress-bar"></div>
+        </div>
+        <div id="question-container"></div>
+        <div class="quiz-controls">
+          <button class="quiz-btn secondary" id="prev-btn" onclick="previousQuestion()" disabled>Previous</button>
+          <button class="quiz-btn primary" id="next-btn" onclick="nextQuestion()" disabled>Next</button>
+        </div>
+      </div>
+
+      <div id="quiz-results" class="quiz-container results-container">
+        <h2 style="margin-bottom: 20px; font-size: 26px;">Your Results</h2>
+        <p style="color: var(--muted); margin-bottom: 24px;">
+          Based on your responses, here are the TheraPals that might resonate with you:
+        </p>
+        <div id="results-list"></div>
+        <div style="margin-top: 24px;">
+          <button class="quiz-btn primary" onclick="restartQuiz()">Take Quiz Again</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <main>
     <article>
@@ -305,6 +534,205 @@
   <footer>
     TheraPals are for support and self-expression, not diagnosis. If you or someone you know is struggling, please reach out to a licensed mental health professional or local emergency services for immediate help.
   </footer>
+
+  <script>
+    const questions = [
+      {
+        text: "How would you describe your energy levels and focus?",
+        options: [
+          { text: "My mind races with ideas, and I jump between tasks quickly", scores: { adhd: 3, anxiety: 1 } },
+          { text: "I experience periods of high energy and creativity, then low periods", scores: { bipolar: 3 } },
+          { text: "I often feel worried or on edge, even when things are okay", scores: { anxiety: 3, ptsd: 1 } },
+          { text: "I feel consistently low energy and find it hard to get motivated", scores: { depression: 3 } },
+          { text: "I feel hypervigilant or on guard, especially after difficult experiences", scores: { ptsd: 3, anxiety: 1 } }
+        ]
+      },
+      {
+        text: "How do you handle stress and overwhelming situations?",
+        options: [
+          { text: "I get distracted easily and struggle to stay organized", scores: { adhd: 3 } },
+          { text: "My mood can swing dramatically between feeling great and feeling down", scores: { bipolar: 3 } },
+          { text: "I worry about worst-case scenarios and feel physical tension", scores: { anxiety: 3 } },
+          { text: "I feel numb or disconnected, and things feel heavy", scores: { depression: 3 } },
+          { text: "I have strong reactions to reminders of past trauma", scores: { ptsd: 3 } }
+        ]
+      },
+      {
+        text: "What describes your sleep patterns?",
+        options: [
+          { text: "I have trouble falling asleep because my mind is racing", scores: { adhd: 2, anxiety: 2 } },
+          { text: "I have periods of needing very little sleep, then periods of sleeping too much", scores: { bipolar: 3 } },
+          { text: "I have trouble sleeping due to worry or restlessness", scores: { anxiety: 3 } },
+          { text: "I sleep too much or have trouble getting out of bed", scores: { depression: 3 } },
+          { text: "I have nightmares or trouble sleeping due to past experiences", scores: { ptsd: 3 } }
+        ]
+      },
+      {
+        text: "How do you relate to your emotions?",
+        options: [
+          { text: "I feel emotions intensely and react quickly", scores: { adhd: 2, anxiety: 1 } },
+          { text: "My emotions shift between extreme highs and lows", scores: { bipolar: 3 } },
+          { text: "I feel anxious or worried most of the time", scores: { anxiety: 3 } },
+          { text: "I feel sad, empty, or numb most days", scores: { depression: 3 } },
+          { text: "I feel on edge, easily startled, or emotionally overwhelmed", scores: { ptsd: 3 } }
+        ]
+      },
+      {
+        text: "What challenges do you face in daily life?",
+        options: [
+          { text: "Staying organized, completing tasks, and managing time", scores: { adhd: 3 } },
+          { text: "Maintaining stable routines and managing mood swings", scores: { bipolar: 3 } },
+          { text: "Avoiding situations that make me anxious or worried", scores: { anxiety: 3 } },
+          { text: "Finding motivation and interest in activities I used to enjoy", scores: { depression: 3 } },
+          { text: "Feeling safe and managing triggers from past experiences", scores: { ptsd: 3 } }
+        ]
+      },
+      {
+        text: "How do you interact with others?",
+        options: [
+          { text: "I interrupt or have trouble waiting my turn in conversations", scores: { adhd: 3 } },
+          { text: "My social energy varies—very outgoing sometimes, withdrawn other times", scores: { bipolar: 2 } },
+          { text: "I worry about what others think and avoid social situations", scores: { anxiety: 3 } },
+          { text: "I withdraw from others and feel disconnected", scores: { depression: 3 } },
+          { text: "I have trouble trusting others or feel unsafe in relationships", scores: { ptsd: 3 } }
+        ]
+      }
+    ];
+
+    const theraPals = {
+      adhd: { name: "Ziggy", emoji: "⚡", link: "adhd-pal.html", color: "#f472b6" },
+      bipolar: { name: "Nova", emoji: "🌗", link: "bipolar-pal.html", color: "#a78bfa" },
+      anxiety: { name: "Lumi", emoji: "🌪️", link: "anxiety-pal.html", color: "#22d3ee" },
+      depression: { name: "Milo", emoji: "🌧️", link: "depression-pal.html", color: "#60a5fa" },
+      ptsd: { name: "Ash", emoji: "🛡️", link: "ptsd-pal.html", color: "#22c55e" }
+    };
+
+    let currentQuestion = 0;
+    let answers = [];
+    let scores = { adhd: 0, bipolar: 0, anxiety: 0, depression: 0, ptsd: 0 };
+
+    function startQuiz() {
+      document.getElementById('quiz-start').classList.remove('active');
+      document.getElementById('quiz-questions').classList.add('active');
+      showQuestion();
+    }
+
+    function showQuestion() {
+      const question = questions[currentQuestion];
+      const container = document.getElementById('question-container');
+      
+      container.innerHTML = `
+        <div class="question-card">
+          <div class="question-number">Question ${currentQuestion + 1} of ${questions.length}</div>
+          <div class="question-text">${question.text}</div>
+          <div class="options">
+            ${question.options.map((option, index) => `
+              <div class="option ${answers[currentQuestion] === index ? 'selected' : ''}" 
+                   onclick="selectOption(${index})">
+                ${option.text}
+              </div>
+            `).join('')}
+          </div>
+        </div>
+      `;
+
+      updateProgress();
+      updateButtons();
+    }
+
+    function selectOption(index) {
+      answers[currentQuestion] = index;
+      showQuestion();
+    }
+
+    function updateProgress() {
+      const progress = ((currentQuestion + 1) / questions.length) * 100;
+      document.getElementById('progress-bar').style.width = progress + '%';
+    }
+
+    function updateButtons() {
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+      
+      prevBtn.disabled = currentQuestion === 0;
+      nextBtn.disabled = answers[currentQuestion] === undefined;
+      
+      if (currentQuestion === questions.length - 1) {
+        nextBtn.textContent = 'See Results';
+      } else {
+        nextBtn.textContent = 'Next';
+      }
+    }
+
+    function previousQuestion() {
+      if (currentQuestion > 0) {
+        currentQuestion--;
+        showQuestion();
+      }
+    }
+
+    function nextQuestion() {
+      if (answers[currentQuestion] === undefined) return;
+      
+      if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        showQuestion();
+      } else {
+        showResults();
+      }
+    }
+
+    function calculateScores() {
+      scores = { adhd: 0, bipolar: 0, anxiety: 0, depression: 0, ptsd: 0 };
+      
+      answers.forEach((answerIndex, questionIndex) => {
+        const option = questions[questionIndex].options[answerIndex];
+        Object.keys(option.scores).forEach(condition => {
+          scores[condition] += option.scores[condition];
+        });
+      });
+    }
+
+    function showResults() {
+      calculateScores();
+      
+      const sortedResults = Object.entries(scores)
+        .map(([condition, score]) => ({ condition, score, ...theraPals[condition] }))
+        .sort((a, b) => b.score - a.score)
+        .filter(result => result.score > 0);
+
+      const resultsContainer = document.getElementById('results-list');
+      resultsContainer.innerHTML = sortedResults.map((result, index) => `
+        <div class="result-card">
+          <h3>${result.emoji} ${result.name} (${result.condition.toUpperCase()})</h3>
+          <p>You scored ${result.score} points. ${getResultDescription(result.condition)}</p>
+          <a href="${result.link}" class="result-link">Meet ${result.name} →</a>
+        </div>
+      `).join('');
+
+      document.getElementById('quiz-questions').classList.remove('active');
+      document.getElementById('quiz-results').classList.add('active');
+    }
+
+    function getResultDescription(condition) {
+      const descriptions = {
+        adhd: "Your responses suggest you might relate to experiences with attention, focus, and energy management.",
+        bipolar: "Your responses suggest you might relate to experiences with mood fluctuations and energy cycles.",
+        anxiety: "Your responses suggest you might relate to experiences with worry, stress, and feeling on edge.",
+        depression: "Your responses suggest you might relate to experiences with low mood, motivation, and energy.",
+        ptsd: "Your responses suggest you might relate to experiences with trauma responses and feeling unsafe."
+      };
+      return descriptions[condition] || "";
+    }
+
+    function restartQuiz() {
+      currentQuestion = 0;
+      answers = [];
+      scores = { adhd: 0, bipolar: 0, anxiety: 0, depression: 0, ptsd: 0 };
+      document.getElementById('quiz-results').classList.remove('active');
+      document.getElementById('quiz-start').classList.add('active');
+    }
+  </script>
 </body>
 </html>
 
